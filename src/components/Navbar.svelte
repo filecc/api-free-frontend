@@ -34,7 +34,7 @@
             render: isLogged
 		}
 	];
-	console.log(links)
+
 
     function reRun(){
         invalidateAll()
@@ -46,7 +46,7 @@
 <nav class="flex items-center justify-between py-4">
 	<!-- LOGO -->
 	<article class="w-12 h-12">
-        {isLogged}
+       
 		<img
 			class="w-full rounded-full border border-gray-800 dark:border-gray-200"
 			src="https://cdn.pixabay.com/photo/2017/06/10/07/22/news-2389226__180.png"

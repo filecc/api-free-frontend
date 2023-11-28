@@ -10,14 +10,14 @@
         credentials: 'include'
        }).then(res => {
            if(res.status == 200){
-              goto('/')
+              goto('/', { invalidateAll: true })
            }
            else {
             throw error(505, 'Something went wrong')
            }
        })
     });
-    invalidateAll()
+   
     
 </script>
 

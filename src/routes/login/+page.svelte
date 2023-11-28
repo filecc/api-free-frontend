@@ -1,9 +1,12 @@
 <script lang="ts">
-	import { goto, invalidate, invalidateAll } from "$app/navigation";
+	import { goto } from "$app/navigation";
+	import { redirect } from "@sveltejs/kit";
 
     export let data;
     if(data.result.code == 200){
-        goto('/user/dashboard')
+        goto('/user/dashboard', {
+            invalidateAll: true
+        })
     }
 	
     let email : string | null = null
@@ -32,8 +35,10 @@
            
             return
         }
-        invalidateAll()
-        goto('/user/dashboard')
+        goto('/user/dashboard', {
+            invalidateAll: true
+        })
+        
         
       
     }
