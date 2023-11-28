@@ -9,7 +9,7 @@
 
 <section>
     <h1>All the news</h1>
-    <section class="mt-6">
+    <section class="mt-6 flex flex-col gap-8">
         {#if data.posts.length === 0}
         <p>No news</p>
         {/if}
