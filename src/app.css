@@ -1,7 +1,29 @@
 
 @layer base {
     h1 {
-        @apply text-4xl font-semibold text-gray-800 dark:text-gray-50;
+        @apply text-4xl font-semibold;
+    }
+    h2 {
+        @apply text-2xl font-semibold;
+    }
+    p {
+        @apply text-base opacity-70 leading-relaxed;
+    }
+    span {
+        @apply text-xs opacity-70;
+    }
+}
+
+@layer components {
+    .flex-center{
+        @apply flex items-center justify-center;
+    }
+    .text-color{
+        @apply text-gray-800 dark:text-gray-50;
+    
+    }
+    .text-colored{
+        @apply text-teal-600 dark:text-teal-400
     }
 }
 
