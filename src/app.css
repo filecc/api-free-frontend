@@ -1,0 +1,10 @@
+
+@layer base {
+    h1 {
+        @apply text-4xl font-semibold text-gray-800 dark:text-gray-50;
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
