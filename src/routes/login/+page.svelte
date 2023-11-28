@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { goto } from "$app/navigation";
+	import { goto, invalidate, invalidateAll } from "$app/navigation";
 
     export let data;
     if(data.result.code == 200){
@@ -28,11 +28,11 @@
         if(result.code != 200){
             errorType = result.error
             errors = result.messages
-            console.log(result)
             loading = false
            
             return
         }
+        invalidateAll()
         goto('/user/dashboard')
         
       
@@ -40,10 +40,10 @@
    
 </script>
 
-<div class="grid place-items-center">
-	<h1>Login</h1>
+<div class="grid place-items-center flex-1">
 	<div class="flex flex-col gap-2 w-full">
-		<div class="w-full flex flex-col gap-2">
+        <h1 class="text-center">Login</h1>
+		<div class="w-full flex flex-col gap-2 mb-4">
 			<label for="email">Email</label>
 			<div class="relative">
 				<input
