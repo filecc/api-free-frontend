@@ -39,9 +39,11 @@
             errors = result.messages
             loading = false
             return
-        }
-        console.log(result)
-        goto('/blog/'+result.slug)
+        }      
+         goto('/blog/'+result.slug)
+        
+        
+        
     }
 
 </script>
